@@ -1,9 +1,5 @@
 from bottle import route, default_app, request, template
 
-@route('/name/<name>')
-def nameindex(name='Stranger'):
-    return '<strong>Hello, %s!</strong>' % name
- 
 @route('/')
 def index():
     return '<strong>Hello World!</strong>'
