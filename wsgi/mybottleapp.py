@@ -1,13 +1,8 @@
 from bottle import route, default_app, request, template
 
-@route('/name/<name>')
-def nameindex(name='Stranger'):
-    return '<strong>Hello, %s!</strong>' % name
- 
-@route('/')
-def index():
-    return '<strong>Hello World!</strong>'
-
+@route('/',method='POST')
+def inserciondedatos():
+	return template(template_inic.tpl)
 # This must be added in order to do correct path lookups for the views
 import os
 from bottle import TEMPLATE_PATH
