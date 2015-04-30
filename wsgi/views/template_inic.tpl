@@ -14,6 +14,6 @@
 		
 		<br/>
 		
-		<input type="submit" value="Buscar" />
+		<input type="submit" value="vertiempo" />
 	</form>
 % include('footer.tpl')

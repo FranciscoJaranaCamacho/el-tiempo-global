@@ -4,9 +4,11 @@ from bottle import route, default_app, request, template
 def inserciondedatos():
 	return template("template_inic.tpl")
 
-@route('/<loc>/<fecha>')
+@route('/vertiempo')
 def consulta():
-	return template("template_con.tpl", loc=localizacion, fecha=fecha)
+	loc=request.form.get("localizacion")
+	fecha=request.form.get("fecha")
+	return template("template_con.tpl", localizacion=loc, fecha=fecha)
 	
 # This must be added in order to do correct path lookups for the views
 import os
