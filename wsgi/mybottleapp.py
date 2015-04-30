@@ -1,6 +1,6 @@
 from bottle import route, default_app, request, template
 
-@route('/')
+@post('/')
 def inserciondedatos():
 	return template(template_inic.tpl)
 	
