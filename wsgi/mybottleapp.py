@@ -8,10 +8,11 @@ def inserciondedatos():
 def consulta():
 	loc=request.form.get("localizacion")
 	fecha=request.form.get("fecha")
+	opcion=request.form.get("tipo")
 	URL_BASE= 'http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':loc,'date':fecha,'format':'json'}
 	r= requests.get (URL_BASE,params=dic)
-	return template("template_con.tpl")
+	return template("template_con.tpl",localizacion=loc,fecha=fecha,tipo=opcion)
 	
 # This must be added in order to do correct path lookups for the views
 import os
