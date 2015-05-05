@@ -8,6 +8,6 @@
 		<input type="text" name="fecha" value="" />
 		<br/>
 		<br/>
-		<input type="submit" value="vertiempo" />
+		<input type="submit" value="Comprobar clima" />
 	</form>
 % include('footer.tpl')
