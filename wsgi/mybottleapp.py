@@ -1,5 +1,4 @@
 from bottle import route, default_app, request, template
-import requests
 
 @route('/')
 def inserciondedatos():
