@@ -9,13 +9,14 @@
 		<br/>
 		<h3>¿Desea saber información general del clima, información básica por horas o información avanzada?</h3>
 		<br/>
-		<p>(Si elige información avanzada sería recomendable que la localización fuese de tipo latitud/longitud para una mayor precisión)</p>
-		<br/>
 		<select name="tipo">
 			<option value="general">General</option>
 			<option value="basica">Básica</option>
 			<option value="avanzada">Avanzada</option>
 		</select>
+		<br/>
+		<p>(Si elige información avanzada sería recomendable que la localización fuese de tipo latitud/longitud para una mayor precisión)</p>
+		<br/>
 		<br/>
 		<input type="submit" value="Comprobar clima" />
 	</form>
