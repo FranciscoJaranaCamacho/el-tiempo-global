@@ -6,11 +6,11 @@ def inserciondedatos():
 
 @route('/vertiempo')
 def consulta():
-	localizacion=request.form.get("loc")
-	fecha=request.form.get("date")
+	localizacion=request.form.get("localizacion")
+	fecha=request.form.get("fecha")
 	tipo=request.form.get("tipo")
-	URL_BASE= 'http://api.worldweatheronline.com/free/v2/ski.ashx'
-	dic={'key':'62dfc963c650d5c89965ac2480534','q':loc,'date':fecha,'format':'json'}
+	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
+	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	inf= requests.get (URL_BASE,params=dic)
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,inf=inf['data']['weather'][0])
 	
