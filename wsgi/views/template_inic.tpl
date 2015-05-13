@@ -1,7 +1,7 @@
 % include('header.tpl')
 	<h2>Introduce una localización de la que desees una predicción</h2>
 	<p>(Puedes poner nombre de ciudad, latitud/longitud o dirección IP pública)</p>
-	<form action="/vertiempo" method="get">
+	<form action="/vertiempo" method="post">
 		<input type="text" name="localizacion" value="" />
 		<br/>
 		<h3>¿De qué día quieres la predicción?</h3>
