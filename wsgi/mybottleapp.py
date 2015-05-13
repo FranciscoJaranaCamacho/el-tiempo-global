@@ -4,7 +4,7 @@ from bottle import route, default_app, request, template, run
 def inserciondedatos():
 	return template("template_inic.tpl")
 
-@route('/vertiempo')
+@post('/vertiempo')
 def consulta():
 	localizacion=request.form.get("localizacion")
 	fecha=request.form.get("fecha")
