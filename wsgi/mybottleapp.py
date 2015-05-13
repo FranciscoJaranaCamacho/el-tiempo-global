@@ -6,12 +6,12 @@ def inserciondedatos():
 
 @post('/vertiempo')
 def consulta():
-	localizacion=request.form.get("localizacion")
-	fecha=request.form.get("fecha")
-	tipo=request.form.get("tipo")
+	localizacion=request.form.post("localizacion")
+	fecha=request.form.post("fecha")
+	tipo=request.form.post("tipo")
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
-	inf= requests.get (URL_BASE,params=dic)
+	inf= requests.post (URL_BASE,params=dic)
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,inf=inf['data']['weather'][0])
 	
 # This must be added in order to do correct path lookups for the views
