@@ -1,6 +1,6 @@
 % include('header.tpl')
 	<h2>Esta es la información climatológica que ha solicitado</h2>
-		<p>{{localizacion}}{{fecha}}{{tipo}}{{inf}}</p>
+		<p>Lugar: {{localizacion}}, a dia de {{fecha}}</p>
 
 	% if tipo=="general":
 		<h3>Información general</h3>
@@ -29,14 +29,14 @@
 		</br>
 		<h3>04:00</h3>
 		</br>
-		<p>Temperatura (ºC/ºF): {{inf['hourly'][4]['bottom'][0]['tempC']}} / {{inf['hourly'][0]['bottom'][0]['tempF']}}</p>
-		<p>Estado del cielo: {{inf['hourly'][4]['bottom'][0]['weatherDesc'][0]['value']}}</p>
-		<p>Dirección del viento: {{inf['hourly'][4]['bottom'][0]['winddir16Point']}}</p>
-		<p>Grado de dirección del viento: {{inf['hourly'][4]['bottom'][0]['winddirDegree']}}</p>
-		<p>Dirección del viento (Km/h): {{inf['hourly'][4]['bottom'][0]['windspeedKmph']}}</p>
-		<p>Dirección del viento (millas/h): {{inf['hourly'][4]['bottom'][0]['windspeedMiles']}}</p>
+		<p>Temperatura (ºC/ºF): {{inf['hourly'][1]['bottom'][0]['tempC']}} / {{inf['hourly'][1]['bottom'][0]['tempF']}}</p>
+		<p>Estado del cielo: {{inf['hourly'][1]['bottom'][0]['weatherDesc'][0]['value']}}</p>
+		<p>Dirección del viento: {{inf['hourly'][1]['bottom'][0]['winddir16Point']}}</p>
+		<p>Grado de dirección del viento: {{inf['hourly'][1]['bottom'][0]['winddirDegree']}}</p>
+		<p>Dirección del viento (Km/h): {{inf['hourly'][1]['bottom'][0]['windspeedKmph']}}</p>
+		<p>Dirección del viento (millas/h): {{inf['hourly'][1]['bottom'][0]['windspeedMiles']}}</p>
 
 		
 	%elif tipo=="avanzada":
-%>
+
 % include('footer.tpl')
