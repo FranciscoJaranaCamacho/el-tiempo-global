@@ -6,9 +6,9 @@ def inserciondedatos():
 
 @post('/vertiempo')
 def consulta():
-	localizacion=request.form.post("localizacion")
-	fecha=request.form.post("fecha")
-	tipo=request.form.post("tipo")
+	localizacion=request.forms.post("localizacion")
+	fecha=request.forms.post("fecha")
+	tipo=request.forms.post("tipo")
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	inf=request.post(URL_BASE,params=dic)
