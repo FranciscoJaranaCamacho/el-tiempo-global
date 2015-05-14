@@ -1,17 +1,17 @@
-from bottle import route, post, default_app, request, template, run
+from bottle import route, default_app, request, template, run
 
 @route('/')
 def inserciondedatos():
 	return template("template_inic.tpl")
 
-@post('/vertiempo')
+@route('/vertiempo')
 def consulta():
-	localizacion=request.forms.post("localizacion")
-	fecha=request.forms.post("fecha")
-	tipo=request.forms.post("tipo")
+	localizacion=request.forms.get("localizacion")
+	fecha=request.forms.get("fecha")
+	tipo=request.forms.get("tipo")
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
-	inf=request.post(URL_BASE,params=dic)
+	inf=request.get(URL_BASE,params=dic)
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,inf=inf['data']['weather'][0])
 	
 # This must be added in order to do correct path lookups for the views
