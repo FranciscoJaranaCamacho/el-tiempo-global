@@ -12,7 +12,7 @@ def consulta():
 	tipo=request.forms.get("tipo")
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
-	infor=requests.get(URL_BASE,params=dic)
+	infor=requests.POST(URL_BASE,params=dic)
 	datos=infor.json
 	general=datos
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,inf=datos['data']['weather'][0])
