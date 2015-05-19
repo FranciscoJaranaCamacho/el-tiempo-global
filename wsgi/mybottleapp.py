@@ -16,7 +16,7 @@ def consulta():
 	datos=infor.json
 	return datos
 	#return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,inf=datos['data']['weather'][0])
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo)
+	#return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo)
 # This must be added in order to do correct path lookups for the views
 import os
 from bottle import TEMPLATE_PATH
