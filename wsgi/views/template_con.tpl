@@ -5,7 +5,7 @@
 	% if tipo=="general":
 		<h3>Información general</h3>
 		</br>
-			{{datos}}
+			<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
 
 	%elif tipo=="basica":
 		<h3>Información general</h3>
