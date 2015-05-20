@@ -9,6 +9,10 @@ def inserciondedatos():
 def consulta():
 	localizacion=request.forms.get("localizacion")
 	fecha=request.forms.get("fecha")
+	if fecha=="hoy":
+		fecha="today"
+	elif fecha=="mañana":
+		fecha="tomorrow"
 	tipo=request.forms.get("tipo")
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}

@@ -5,10 +5,10 @@
 	% if tipo=="general":
 		<h3>Información general</h3>
 		</br>
-			<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
-			<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
-			<p>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</p>
-			<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}
+		<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
+		<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
+		<p>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</p>
+		<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}
 
 	%elif tipo=="basica":
 		<h3>Información general</h3>
