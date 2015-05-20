@@ -1,17 +1,17 @@
 % include('header.tpl')
-	<h2>Esta es la datos['data']['weather'][0]ormación climatológica que ha solicitado</h2>
+	<h2>Esta es la información climatológica que ha solicitado</h2>
 		<p>Lugar: {{localizacion}}, a dia de {{fecha}}</p>
 
 	% if tipo=="general":
-		<h3>datos['data']['weather'][0]ormación general</h3>
+		<h3>Información general</h3>
 		</br>
-		<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
+		
 		<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
 		<p>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</p>
 		<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}
 
 	%elif tipo=="basica":
-		<h3>datos['data']['weather'][0]ormación general</h3>
+		<h3>Información general</h3>
 		</br>
 		<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
 		<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
