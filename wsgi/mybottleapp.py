@@ -1,3 +1,4 @@
+# -*- coding: utf -8 -*-
 from bottle import Bottle, route, post, default_app, request, template, run
 import requests
 
