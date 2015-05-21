@@ -1,6 +1,9 @@
 % include('header.tpl')
 	<h2>Esta es la información climatológica que ha solicitado</h2>
-		<p>Lugar: {{localizacion}}, a dia de {{fecha}}</p>
+		% if fecha=="tomorrow":
+			<p>Lugar: {{localizacion}}, a dia de mañana</p>
+		%elif fecha=="today":
+			<p>Lugar: {{localizacion}}, a dia de hoy</p>
 
 	% if tipo=="general":
 		<h3>Información general</h3>
