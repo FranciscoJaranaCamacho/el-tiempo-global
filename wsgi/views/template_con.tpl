@@ -319,5 +319,14 @@
 		<p>Grado de dirección del viento: {{datos['data']['weather'][0]['hourly'][7]['top'][0]['winddirDegree']}}</p>
 		<p>Dirección del viento (Km/h): {{datos['data']['weather'][0]['hourly'][7]['top'][0]['windspeedKmph']}}</p>
 		<p>Dirección del viento (millas/h): {{datos['data']['weather'][0]['hourly'][7]['top'][0]['windspeedMiles']}}</p>
+	</br>
+	<h2>Otras consultas interesantes</h2>
+	</br>
+	% if dia!="ayer":
+		<a href="/vertiempo_ayer?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos de ayer</a>
+	%elif dia!="mes":
+		<a href="/vertiempo_mes_pasado?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos del mismo día del mes pasado</a>
+	%elif dia!="anio":
+		<a href="/vertiempo_anio_pasado?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos del mismo día de hace un año</a>
 		
 % include('footer.tpl')
