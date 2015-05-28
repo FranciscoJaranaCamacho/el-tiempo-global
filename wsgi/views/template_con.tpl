@@ -322,11 +322,13 @@
 	</br>
 	<h2>Otras consultas interesantes</h2>
 	</br>
-	% if dia!="ayer":
-		<a href="/vertiempo_ayer?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos de ayer</a>
+	% if dia!="hoy":
+		<a href="/vertiempo/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+	%elif dia!="ayer":
+		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de ayer</a>
 	%elif dia!="mes":
-		<a href="/vertiempo_mes_pasado?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos del mismo día del mes pasado</a>
+		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
 	%elif dia!="anio":
-		<a href="/vertiempo_anio_pasado?key=62dfc963c650d5c89965ac2480534&q={{localizacion}}&date={{fecha}}&format=json">Ver los datos del mismo día de hace un año</a>
+		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 		
 % include('footer.tpl')
