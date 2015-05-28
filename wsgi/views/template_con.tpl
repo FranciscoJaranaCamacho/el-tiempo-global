@@ -323,7 +323,7 @@
 	<h2>Otras consultas interesantes</h2>
 	</br>
 	% if dia!="hoy":
-		<a href="/vertiempo/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
 	%elif dia!="ayer":
 		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de ayer</a>
 	%elif dia!="mes":
