@@ -1,0 +1,8 @@
+body {
+	background-image: url("/static/css/fondo.jpg") no-repeat fixed center;
+	-webkit-background-size: cover;
+	-mdz-background-size: cover;
+	-o-background-size: conver;
+	background-size: cover;
+	text-align: center;
+}
