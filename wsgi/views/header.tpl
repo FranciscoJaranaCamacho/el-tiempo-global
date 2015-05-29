@@ -3,7 +3,7 @@
 <head>
 <title>Hola, bienvenido a El tiempo global</title>
 <meta charset="utf-8" />
-<style type="/static/css/hoja_estilo.css"
+<style type="/static/css/hoja_estilo.css" />
 </head>
 
 <body>
