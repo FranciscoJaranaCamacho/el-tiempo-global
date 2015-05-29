@@ -91,7 +91,7 @@
 		<p>Dirección del viento (millas/h): {{datos['data']['weather'][0]['hourly'][7]['bottom'][0]['windspeedMiles']}}</p>
 		
 	%elif tipo=="avanzada":
-		<h3>datos['data']['weather'][0]ormación general</h3>
+		<h3>Información general</h3>
 		</br>
 		<p>Temperatura máxima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['maxtempC']}} / {{datos['data']['weather'][0]['bottom'][0]['maxtempF']}}</p>
 		<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
