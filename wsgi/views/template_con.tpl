@@ -324,8 +324,10 @@
 	</br>
 	% if dia!="hoy":
 		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+	%elif dia!="next":
+		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>
 	%elif dia!="ayer":
-		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de ayer</a>
+		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
 	%elif dia!="mes":
 		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
 	%elif dia!="anio":

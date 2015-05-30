@@ -1,6 +1,7 @@
 # -*- coding: utf -8 -*-
 from bottle import Bottle, route, post, default_app, request, template, run
 import requests
+from datetime import datetime, timedelta
 
 @route('/')
 def inserciondedatos():
@@ -20,6 +21,7 @@ def consulta():
 
 @post('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>/<datos>')
 def consulta():
+	fecha=date.today()
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
@@ -30,6 +32,7 @@ def consulta():
 @post('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>/<datos>')
 def consulta2():
 	dia="ayer"
+	fecha=fecha-timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
@@ -38,20 +41,32 @@ def consulta2():
 
 @post('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>/<datos>')
 def consulta3():
+	dia="mes"
+	fecha=fecha-timedelta(days=30)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	dia="mes"
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,dia=dia)
 
 @post('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>/<datos>')
 def consulta4():
+	dia="anio"
+	fecha=fecha-timedelta(days=365)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	dia="anio"
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,dia=dia)
+
+@post('/vertiempo_despues/<localizacion>/<fecha>/<tipo>/<datos>')
+def consulta5():
+	dia="next"
+	fecha=fecha+timedelta(days=1)
+	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
+	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
+	infor=requests.get(URL_BASE,params=dic)
+	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,dia=dia)
 
 # This must be added in order to do correct path lookups for the views
