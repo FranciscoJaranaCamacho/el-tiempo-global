@@ -9,7 +9,14 @@
 		<p>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</p>
 		<p>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</p>
 		<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}
-
+		</br>
+		<h2>Otras consultas interesantes</h2>
+		</br>
+		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 	%elif tipo=="basica":
 		<h3>Información general</h3>
 		</br>
@@ -89,6 +96,14 @@
 		<p>Grado de dirección del viento: {{datos['data']['weather'][0]['hourly'][7]['bottom'][0]['winddirDegree']}}</p>
 		<p>Dirección del viento (Km/h): {{datos['data']['weather'][0]['hourly'][7]['bottom'][0]['windspeedKmph']}}</p>
 		<p>Dirección del viento (millas/h): {{datos['data']['weather'][0]['hourly'][7]['bottom'][0]['windspeedMiles']}}</p>
+		</br>
+		<h2>Otras consultas interesantes</h2>
+		</br>
+		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 		
 	%elif tipo=="avanzada":
 		<h3>Información general</h3>
@@ -322,15 +337,10 @@
 	</br>
 	<h2>Otras consultas interesantes</h2>
 	</br>
-	% if dia!="hoy":
-		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
-	%elif dia!="next":
-		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>
-	%elif dia!="ayer":
-		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
-	%elif dia!="mes":
-		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
-	%elif dia!="anio":
-		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
+	<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
+	<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+	<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+	<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+	<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 		
 % include('footer.tpl')
