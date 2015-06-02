@@ -18,7 +18,7 @@ def consulta():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@post('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>/<datos>')
+@post('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>')
 def consulta():
 	fecha=date.today()
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
@@ -27,7 +27,7 @@ def consulta():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 	
-@post('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>/<datos>')
+@post('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>')
 def consulta2():
 	fecha=fecha-timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
@@ -36,7 +36,7 @@ def consulta2():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@post('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>/<datos>')
+@post('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta3():
 	fecha=fecha-timedelta(days=30)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
@@ -45,7 +45,7 @@ def consulta3():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@post('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>/<datos>')
+@post('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta4():
 	fecha=fecha-timedelta(days=365)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
@@ -54,7 +54,7 @@ def consulta4():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@post('/vertiempo_despues/<localizacion>/<fecha>/<tipo>/<datos>')
+@post('/vertiempo_despues/<localizacion>/<fecha>/<tipo>')
 def consulta5():
 	fecha=fecha+timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
