@@ -5,7 +5,6 @@
 		<input type="text" name="localizacion" value="" />
 		<br/>
 		<h3>¿De qué día quieres la predicción?</h3>
-		<p>(Puede poner hoy, mañana, o una fecha concreta)</p>
 		<p>(El formato de fecha es aaaa-mm-dd)</p>
 		<br/>
 		<input type="text" name="fecha" value="" />

@@ -13,9 +13,13 @@
 		<h2>Otras consultas interesantes</h2>
 		</br>
 		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
-		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+		</br>
+		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>
+		</br>
 		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+		</br>
 		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+		</br>
 		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 	%elif tipo=="basica":
 		<h3>Información general</h3>
@@ -100,9 +104,13 @@
 		<h2>Otras consultas interesantes</h2>
 		</br>
 		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
-		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+		</br>
+		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>
+		</br>
 		<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+		</br>
 		<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+		</br>
 		<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 		
 	%elif tipo=="avanzada":
@@ -338,9 +346,13 @@
 	<h2>Otras consultas interesantes</h2>
 	</br>
 	<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos de hoy</a>
-	<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>:
+	</br>
+	<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día siguiente</a>
+	</br>
 	<a href="/vertiempo_ayer/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del día anterior</a>
+	</br>
 	<a href="/vertiempo_mes_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día del mes pasado</a>
+	</br>
 	<a href="/vertiempo_anio_pasado/{{localizacion}}/{{fecha}}/{{tipo}}/{{datos}}">Ver los datos del mismo día de hace un año</a>
 		
 % include('footer.tpl')
