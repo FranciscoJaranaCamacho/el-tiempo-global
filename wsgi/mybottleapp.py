@@ -29,7 +29,8 @@ def consulta1(localizacion,tipo):
 	
 @route('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>')
 def consulta2(localizacion, fecha, tipo):
-	fecha=datetime.datetime.strptime(fecha, '%y-%m-%d').date()
+	formato="%y-%m-%d"
+	fecha=datetime.strptime(fecha[2:10],formato).date()
 	fecha=fecha-timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -39,7 +40,8 @@ def consulta2(localizacion, fecha, tipo):
 
 @route('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta3(localizacion, fecha, tipo):
-	fecha=datetime.datetime.strptime(fecha, '%y-%m-%d').date()
+	formato="%y-%m-%d"
+	fecha=datetime.strptime(fecha[2:10],formato).date()
 	fecha=fecha-timedelta(days=30)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -49,7 +51,8 @@ def consulta3(localizacion, fecha, tipo):
 
 @route('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta4(localizacion, fecha, tipo):
-	fecha=datetime.datetime.strptime(fecha, '%y-%m-%d').date()
+	formato="%y-%m-%d"
+	fecha=datetime.strptime(fecha[2:10],formato).date()
 	fecha=fecha-timedelta(days=365)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -59,7 +62,8 @@ def consulta4(localizacion, fecha, tipo):
 
 @route('/vertiempo_despues/<localizacion>/<fecha>/<tipo>')
 def consulta5(localizacion, fecha, tipo):
-	fecha=datetime.datetime.strptime(fecha, '%y-%m-%d').date()
+	formato="%y-%m-%d"
+	fecha=datetime.strptime(fecha[2:10],formato).date()
 	fecha=fecha+timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
