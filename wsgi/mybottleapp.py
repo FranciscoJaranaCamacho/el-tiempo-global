@@ -18,7 +18,7 @@ def consulta():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@post('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>')
+@route('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>')
 def consulta1():
 	fecha=date.today()
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
