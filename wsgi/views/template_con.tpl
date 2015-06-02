@@ -12,7 +12,7 @@
 		</br>
 		<h2>Otras consultas interesantes</h2>
 		</br>
-		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos de hoy</a>
+		<a href="/vertiempo_hoy/{{localizacion}}/{{tipo}}">Ver los datos de hoy</a>
 		</br>
 		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos del día siguiente</a>
 		</br>
@@ -103,7 +103,7 @@
 		</br>
 		<h2>Otras consultas interesantes</h2>
 		</br>
-		<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos de hoy</a>
+		<a href="/vertiempo_hoy/{{localizacion}}/{{tipo}}">Ver los datos de hoy</a>
 		</br>
 		<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos del día siguiente</a>
 		</br>
@@ -345,7 +345,7 @@
 	</br>
 	<h2>Otras consultas interesantes</h2>
 	</br>
-	<a href="/vertiempo_hoy/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos de hoy</a>
+	<a href="/vertiempo_hoy/{{localizacion}}/{{tipo}}">Ver los datos de hoy</a>
 	</br>
 	<a href="/vertiempo_despues/{{localizacion}}/{{fecha}}/{{tipo}}">Ver los datos del día siguiente</a>
 	</br>

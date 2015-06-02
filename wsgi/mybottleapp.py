@@ -1,7 +1,7 @@
 # -*- coding: utf -8 -*-
 from bottle import Bottle, route, post, default_app, request, template, run
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, date, timedelta
 
 @route('/')
 def inserciondedatos():
@@ -18,8 +18,8 @@ def consulta():
 	datos=infor.json()
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
-@route('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>')
-def consulta1(localizacion,fecha,tipo):
+@route('/vertiempo_hoy/<localizacion>/<tipo>')
+def consulta1(localizacion,tipo):
 	fecha=date.today()
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -28,7 +28,7 @@ def consulta1(localizacion,fecha,tipo):
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 	
 @post('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>')
-def consulta2():
+def consulta2(localizacion, fecha, tipo):
 	fecha=fecha-timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -37,7 +37,7 @@ def consulta2():
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
 @post('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>')
-def consulta3():
+def consulta3(localizacion, fecha, tipo):
 	fecha=fecha-timedelta(days=30)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -46,7 +46,7 @@ def consulta3():
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
 @post('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>')
-def consulta4():
+def consulta4(localizacion, fecha, tipo):
 	fecha=fecha-timedelta(days=365)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
@@ -55,7 +55,7 @@ def consulta4():
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
 @post('/vertiempo_despues/<localizacion>/<fecha>/<tipo>')
-def consulta5():
+def consulta5(localizacion, fecha, tipo):
 	fecha=fecha+timedelta(days=1)
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
