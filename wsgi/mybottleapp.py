@@ -19,7 +19,7 @@ def consulta():
 	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
 
 @route('/vertiempo_hoy/<localizacion>/<fecha>/<tipo>')
-def consulta1():
+def consulta1(localizacion,fecha,tipo):
 	fecha=date.today()
 	URL_BASE='http://api.worldweatheronline.com/free/v2/ski.ashx'
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
