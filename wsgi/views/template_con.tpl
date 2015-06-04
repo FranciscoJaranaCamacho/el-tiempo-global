@@ -10,9 +10,9 @@
 	<p>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</p>
 	<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}
 	</br>
-	% if tipo=="general":
+	
 		
-	%elif tipo=="basica":
+	%if tipo=="basica":
 		% for i in xrange(0,8):
 		<h3>{{horas[i]}}</h3>
 		</br>

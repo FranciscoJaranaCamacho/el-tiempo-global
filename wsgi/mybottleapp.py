@@ -26,7 +26,7 @@ def consulta1(localizacion,tipo):
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,imagenes=imagenes)
 	
 @route('/vertiempo_ayer/<localizacion>/<fecha>/<tipo>')
 def consulta2(localizacion, fecha, tipo):
@@ -37,7 +37,7 @@ def consulta2(localizacion, fecha, tipo):
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,imagenes=imagenes)
 
 @route('/vertiempo_mes_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta3(localizacion, fecha, tipo):
@@ -48,7 +48,7 @@ def consulta3(localizacion, fecha, tipo):
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,imagenes=imagenes)
 
 @route('/vertiempo_anio_pasado/<localizacion>/<fecha>/<tipo>')
 def consulta4(localizacion, fecha, tipo):
@@ -59,7 +59,7 @@ def consulta4(localizacion, fecha, tipo):
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,imagenes=imagenes)
 
 @route('/vertiempo_despues/<localizacion>/<fecha>/<tipo>')
 def consulta5(localizacion, fecha, tipo):
@@ -70,7 +70,7 @@ def consulta5(localizacion, fecha, tipo):
 	dic={'key':'62dfc963c650d5c89965ac2480534','q':localizacion,'date':fecha,'format':'json'}
 	infor=requests.get(URL_BASE,params=dic)
 	datos=infor.json()
-	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos)
+	return template("template_con.tpl",localizacion=localizacion,fecha=fecha,tipo=tipo,datos=datos,imagenes=imagenes)
 
 def calcular_imagenes(datos):
 	imagenes=[]
