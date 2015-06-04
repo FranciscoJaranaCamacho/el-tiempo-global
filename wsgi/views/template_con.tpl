@@ -34,7 +34,7 @@
 		% for i in xrange(0,9):
 		<h3>{{horas[i]}}</h3>
 		</br>
-		<p>Temperatura (ºC/ºF): {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempC']}} / {{datos['data']['weather'][0]['hourly']i0]['bottom'][0]['tempF']}}</p>
+		<p>Temperatura (ºC/ºF): {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempC']}} / {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempF']}}</p>
 		<p>Estado del cielo: {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['weatherCode']}}</p>
 		<p>Dirección del viento: {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['winddir16Point']}}</p>
 		<p>Grado de dirección del viento: {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['winddirDegree']}}</p>
