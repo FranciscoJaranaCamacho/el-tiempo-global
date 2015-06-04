@@ -31,7 +31,7 @@
 		<p>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}</p>
 		</br>
 
-		% for i in xrange(0,9):
+		% for i in xrange(0,8):
 		<h3>{{horas[i]}}</h3>
 		</br>
 		<p>Temperatura (ºC/ºF): {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempC']}} / {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempF']}}</p>
