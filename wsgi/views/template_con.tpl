@@ -17,7 +17,6 @@
 		<h3>{{horas[i]}}</h3>
 		</br>
 		<p>Temperatura (ºC/ºF): {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempC']}} / {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['tempF']}}</p>
-		
 		<p>Dirección del viento: {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['winddir16Point']}}</p>
 		<p>Grado de dirección del viento: {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['winddirDegree']}}</p>
 		<p>Dirección del viento (Km/h): {{datos['data']['weather'][0]['hourly'][i]['bottom'][0]['windspeedKmph']}}</p>
