@@ -12,8 +12,6 @@
 		<li>Temperatura mínima (ºC/ºF): {{datos['data']['weather'][0]['bottom'][0]['mintempC']}} / {{datos['data']['weather'][0]['bottom'][0]['mintempF']}}</li>
 		<li>Clima general:</li>
 		<img src={{imagenes[5]}}>
-		<li>Probabilidad de nieve: {{datos['data']['weather'][0]['chanceofsnow']}}</li>
-		<li>Cantidad total de nieve (cm): {{datos['data']['weather'][0]['totalSnowfall_cm']}}</li>
 	</ul>
 	</br>
 	%if tipo=="basica":
