@@ -5,14 +5,15 @@
 		<input type="text" name="localizacion" value="" />
 		<br/>
 		<h3>¿De qué día quieres la predicción?</h3>
-		<p>(El formato de fecha es aaaa-mm-dd)</p>
+		<p>(Introduzca primero día, luego mes y luego año)</p>
 		<br/>
-		<input type="text" name="fecha" value="" />
+		<input type="text" name="dia" value="" size="2" maxlength="2"/>/
+		<input type="text" name="mes" value="" size="2" maxlength="2"/>/
+		<input type="text" name="anio" value="" size="4" maxlength="4"/>
 		<br/>
 		<h3>¿Desea saber información general del clima, información básica por horas o información avanzada?</h3>
 		<br/>
 		<select name="tipo">
-			<option value="general">General</option>
 			<option value="basica">Básica</option>
 			<option value="avanzada">Avanzada</option>
 		</select>
